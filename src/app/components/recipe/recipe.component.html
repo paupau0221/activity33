@@ -1,0 +1,27 @@
+
+<main class="roboto-regular">
+  @for(book of recipeList; track $index){
+    <div class="book-card">
+      <div class="book-card__image__container">
+        <img class="book-card__image" [src]="book.image" />
+      </div>
+      <div class="book-card__details">
+        <p class="book-card__details__information roboto-bold">
+          Title: <span class="roboto-regular">{{ book.name }}</span>
+        </p>
+
+        <p class="book-card__details__information roboto-bold">
+          Author: <span class="roboto-regular">{{ book.price }}</span>
+        </p>
+        <p class="book-card__details__information roboto-bold">
+          Star: <span class="roboto-regular">{{ book.star }}</span>
+        </p>
+        <div class="button-container">
+          <button class="button-borrow roboto-medium"> Show Ingredient</button>
+        </div>
+
+      </div>
+    </div>
+  }
+</main>
+
